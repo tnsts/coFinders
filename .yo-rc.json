@@ -44,7 +44,7 @@
     "languages": ["ua", "en", "ru"],
     "lastLiquibaseTimestamp": 1622293556000,
     "entities": ["Tag", "Item"],
-    "herokuAppName": "co-finders-app",
+    "herokuAppName": "co-finders-2021",
     "herokuDeployType": "git",
     "herokuJavaVersion": "1.8"
   }
