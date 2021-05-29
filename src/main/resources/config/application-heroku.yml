@@ -12,7 +12,7 @@
 
 eureka:
   instance:
-    hostname: obscure-crag-52244.herokuapp.com
+    hostname: co-finders-app.herokuapp.com
     non-secure-port: 80
     prefer-ip-address: false
 
