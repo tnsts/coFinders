@@ -1,0 +1,28 @@
+{
+  "coFindersApp": {
+    "item": {
+      "home": {
+        "title": "Items",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Створити новий Item",
+        "createOrEditLabel": "Створити чи редагувати Item",
+        "notFound": "No Items found"
+      },
+      "created": "Новий Item створений з ідентифікатором {{ param }}",
+      "updated": "Item оновлений з ідентифікатором {{ param }}",
+      "deleted": "Item видалений з ідентифікатором {{ param }}",
+      "delete": {
+        "question": "Ви впевнені, що хочете видалити Item {{ id }}?"
+      },
+      "detail": {
+        "title": "Item"
+      },
+      "id": "ID",
+      "title": "Title",
+      "description": "Description",
+      "foundAt": "Found At",
+      "lat": "Lat",
+      "lon": "Lon"
+    }
+  }
+}

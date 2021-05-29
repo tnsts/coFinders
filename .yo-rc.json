@@ -41,6 +41,8 @@
     "packageFolder": "com/cofinders/app",
     "jwtSecretKey": "NzNlOTRhMGYzODk5YjNjZmRlM2Q2YjM1MzZkOWJiZWQ4NzA0YjVmNGJiZDUwYmM3NGMxM2QzYWQ4ZThjY2ExNmZkOTZkZWU1MTMzZjdlNzhlZGMyNjIwYzBlNmRiMGE0OTE5MThhY2RkNGM0YzZmZjQxZmIzNTY1Njc5OWM3NjA=",
     "clientPackageManager": "npm",
-    "languages": ["ua", "en", "ru"]
+    "languages": ["ua", "en", "ru"],
+    "lastLiquibaseTimestamp": 1622293556000,
+    "entities": ["Tag", "Item"]
   }
 }
