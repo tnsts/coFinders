@@ -6,11 +6,13 @@ import com.cofinders.app.service.ItemService;
 import com.cofinders.app.web.rest.errors.BadRequestAlertException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -169,4 +171,68 @@ public class ItemResource {
             .headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString()))
             .build();
     }
+
+    @DeleteMapping("/items/filter")
+    public List<Item> filterItems(@RequestBody RequestFilters data) {
+        log.debug("REST request to filter Items : {}", data);
+        return itemService.filterItems(data.getStartDate(), data.getEndDate(), data.getData(), data.getLat(), data.getLon(), data.getDistance());
+    }
+
+    private class RequestFilters {
+        private Date startDate;
+        private Date endDate;
+        private String data;
+        private Long lat;
+        private Long lon;
+        private Double distance;
+
+        public Date getStartDate() {
+            return startDate;
+        }
+
+        public void setStartDate(Date startDate) {
+            this.startDate = startDate;
+        }
+
+        public Date getEndDate() {
+            return endDate;
+        }
+
+        public void setEndDate(Date endDate) {
+            this.endDate = endDate;
+        }
+
+        public String getData() {
+            return data;
+        }
+
+        public void setData(String data) {
+            this.data = data;
+        }
+
+        public Long getLat() {
+            return lat;
+        }
+
+        public void setLat(Long lat) {
+            this.lat = lat;
+        }
+
+        public Long getLon() {
+            return lon;
+        }
+
+        public void setLon(Long lon) {
+            this.lon = lon;
+        }
+
+        public Double getDistance() {
+            return distance;
+        }
+
+        public void setDistance(Double distance) {
+            this.distance = distance;
+        }
+    }
+
 }
