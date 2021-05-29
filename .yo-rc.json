@@ -43,6 +43,9 @@
     "clientPackageManager": "npm",
     "languages": ["ua", "en", "ru"],
     "lastLiquibaseTimestamp": 1622293556000,
-    "entities": ["Tag", "Item"]
+    "entities": ["Tag", "Item"],
+    "herokuAppName": "obscure-crag-52244",
+    "herokuDeployType": "git",
+    "herokuJavaVersion": "1.8"
   }
 }
