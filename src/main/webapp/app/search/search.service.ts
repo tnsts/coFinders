@@ -11,6 +11,6 @@ export class SearchService {
 
   get(filters: Filters): Observable<{}> {
     // filers to path\body
-    return this.http.post(this.applicationConfigService.getEndpointFor('api/get'), filters);
+    return this.http.post(this.applicationConfigService.getEndpointFor('api/items/filter'), filters);
   }
 }

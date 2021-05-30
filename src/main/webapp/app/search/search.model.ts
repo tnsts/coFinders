@@ -1,9 +1,9 @@
 export class Filters {
   constructor(
-    public search: string,
-    public dateFrom: Date,
-    public dateTo: Date,
-    public radius: number,
+    public data: string,
+    public startDate: Date,
+    public endDate: Date,
+    public distance: number,
     public lat: number,
     public lon: number
   ) {}

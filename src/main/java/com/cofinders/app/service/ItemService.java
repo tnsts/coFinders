@@ -175,7 +175,7 @@ public class ItemService {
                         }
                     );
         }
-        if (lat != null && lon != null && distance != null) {
+        if (lat != null && lon != null && (distance != null && distance > 0)) {
             filter =
                 filter.collect(Collectors.toList()).stream().filter(item -> distance(item.getLat(), item.getLon(), lat, lon) < distance);
         }
