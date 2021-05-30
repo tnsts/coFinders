@@ -4,6 +4,8 @@ import { errorRoute } from './layouts/error/error.route';
 import { navbarRoute } from './layouts/navbar/navbar.route';
 import { DEBUG_INFO_ENABLED } from 'app/app.constants';
 import { Authority } from 'app/config/authority.constants';
+import { SearchComponent } from './search/search.component';
+import { FoundComponent } from './found/found.component';
 
 import { UserRouteAccessService } from 'app/core/auth/user-route-access.service';
 
@@ -29,6 +31,8 @@ const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
           path: 'login',
           loadChildren: () => import('./login/login.module').then(m => m.LoginModule),
         },
+        { path: 'search', component: SearchComponent },
+        { path: 'found', component: FoundComponent },
         ...LAYOUT_ROUTES,
       ],
       { enableTracing: DEBUG_INFO_ENABLED }
