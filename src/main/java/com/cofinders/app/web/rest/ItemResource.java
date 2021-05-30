@@ -12,7 +12,6 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -172,19 +171,38 @@ public class ItemResource {
             .build();
     }
 
-    @DeleteMapping("/items/filter")
+    @PostMapping("/items/filter")
     public List<Item> filterItems(@RequestBody RequestFilters data) {
         log.debug("REST request to filter Items : {}", data);
-        return itemService.filterItems(data.getStartDate(), data.getEndDate(), data.getData(), data.getLat(), data.getLon(), data.getDistance());
+        return itemService.filterItems(
+            data.getStartDate(),
+            data.getEndDate(),
+            data.getData(),
+            data.getLat(),
+            data.getLon(),
+            data.getDistance()
+        );
     }
 
-    private class RequestFilters {
+    public static class RequestFilters {
+
         private Date startDate;
         private Date endDate;
         private String data;
         private Long lat;
         private Long lon;
         private Double distance;
+
+        public RequestFilters() {}
+
+        public RequestFilters(Date startDate, Date endDate, String data, Long lat, Long lon, Double distance) {
+            this.startDate = startDate;
+            this.endDate = endDate;
+            this.data = data;
+            this.lat = lat;
+            this.lon = lon;
+            this.distance = distance;
+        }
 
         public Date getStartDate() {
             return startDate;
@@ -234,5 +252,4 @@ public class ItemResource {
             this.distance = distance;
         }
     }
-
 }
