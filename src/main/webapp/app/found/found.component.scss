@@ -1,0 +1,66 @@
+.row {
+  width: 100%;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  max-width: none;
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label {
+  top: -12px;
+  font-size: 12px;
+}
+.input-container {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-container label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-container input {
+  border: 0;
+  border-bottom: 1px solid #555;
+  background: transparent;
+  width: 100%;
+  padding: 8px 0 5px 0;
+  font-size: 16px;
+}
+
+.input-container input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #5d79b8;
+}
+
+.filters {
+  margin-top: 20px;
+}
+
+#loadImg {
+  margin: 10px auto;
+}
+
+#location {
+  margin: 10px auto 30px auto;
+}
+
+.btn {
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .row,
+  .col-md-9 {
+    margin: 0;
+    padding: 0;
+  }
+}

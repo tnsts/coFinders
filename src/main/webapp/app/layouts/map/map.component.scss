@@ -1,0 +1,19 @@
+#map {
+  height: 91vh;
+}
+
+.map-container {
+  height: 91vh;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  #map {
+    height: 50vh;
+  }
+
+  .map-container {
+    height: 50vh;
+    width: 100%;
+  }
+}
