@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <jhi-map #map [markerName]="markerName"></jhi-map>
+    </div>
+
+    <div class="col-md-3">
+      <h3 jhiTranslate="map.foundTitle"></h3>
+
+      <div class="filters">
+        <div class="input-container">
+          <input type="text" [(ngModel)]="title" name="title" required />
+          <label jhiTranslate="map.title"></label>
+        </div>
+
+        <label jhiTranslate="map.description"></label>
+        <textarea class="form-control" [(ngModel)]="description" name="description" id="description" rows="3"></textarea>
+
+        <button class="btn btn-outline-warning" jhiTranslate="map.loadImage" id="loadImg"></button>
+        <button class="btn btn-outline-success" jhiTranslate="map.mylocation" id="location" (click)="map.locate()"></button>
+
+        <div class="input-container">
+          <input type="datetime-local" [(ngModel)]="date" required />
+          <label jhiTranslate="map.date"></label>
+        </div>
+
+        <div class="input-container">
+          <input type="email" [(ngModel)]="email" name="email" required />
+          <label jhiTranslate="map.email"></label>
+        </div>
+
+        <div class="input-container">
+          <input type="tel" [(ngModel)]="phone" name="phone" />
+          <label jhiTranslate="map.phone"></label>
+        </div>
+
+        <div class="input-container">
+          <input type="text" [(ngModel)]="telegram" name="telegram" />
+          <label>Telegram</label>
+        </div>
+
+        <div class="input-container">
+          <input type="text" [(ngModel)]="facebook" name="facebook" />
+          <label>Facebook</label>
+        </div>
+
+        <button class="btn btn-success" jhiTranslate="map.register"></button>
+      </div>
+    </div>
+  </div>
+</div>

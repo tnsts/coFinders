@@ -1,0 +1,19 @@
+{
+  "map": {
+    "searchTitle": "Enter search parameters",
+    "find": "Find",
+    "title": "Title",
+    "date": "Choose date",
+    "dateFrom": "From",
+    "dateTo": "To",
+    "radius": "Radius",
+    "search": "Search",
+    "description": "Description",
+    "email": "Email",
+    "phone": "Phone number",
+    "mylocation": "My location",
+    "loadImage": "Upload the photo",
+    "foundTitle": "Enter the information about finding",
+    "register": "Register"
+  }
+}

@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <jhi-map #map [markerName]="markerName"></jhi-map>
+    </div>
+
+    <div class="col-md-3">
+      <h3 jhiTranslate="map.searchTitle"></h3>
+
+      <div class="filters">
+        <div class="input-container">
+          <input type="text" [(ngModel)]="search" name="search" />
+          <label jhiTranslate="map.search"></label>
+        </div>
+
+        <div class="input-container">
+          <input type="datetime-local" [(ngModel)]="dateFrom" required />
+          <label jhiTranslate="map.dateFrom"></label>
+        </div>
+
+        <div class="input-container">
+          <input type="datetime-local" [(ngModel)]="dateTo" required />
+          <label jhiTranslate="map.dateTo"></label>
+        </div>
+
+        <div class="input-container">
+          <input type="number" [(ngModel)]="radius" name="radius" (change)="map.radiusChange(radius)" />
+          <label jhiTranslate="map.radius"></label>
+        </div>
+
+        <button class="btn btn-outline-success" jhiTranslate="map.mylocation" id="location" (click)="map.locate()"></button>
+
+        <button class="btn btn-success" jhiTranslate="map.find" (click)="getPoints(map)"></button>
+      </div>
+    </div>
+  </div>
+</div>
