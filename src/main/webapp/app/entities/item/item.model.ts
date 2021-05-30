@@ -7,6 +7,8 @@ export interface IItem {
   foundAt?: dayjs.Dayjs;
   lat?: number;
   lon?: number;
+  imageSrc?: string | null;
+  contacts?: any | {};
 }
 
 export class Item implements IItem {
@@ -16,7 +18,9 @@ export class Item implements IItem {
     public description?: string | null,
     public foundAt?: dayjs.Dayjs,
     public lat?: number,
-    public lon?: number
+    public lon?: number,
+    public imageSrc?: string | null,
+    contacts?: any | {}
   ) {}
 }
 
